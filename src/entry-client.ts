@@ -1,7 +1,7 @@
+//import './app.css'
 import App from './App.svelte'
 
-const app = new App({
+new App({
   target: document.getElementById('app'),
+  hydrate: true
 })
-
-export default app

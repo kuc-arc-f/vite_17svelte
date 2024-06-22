@@ -13,8 +13,8 @@ console.log('clicked');
     }
 //console.log(postItem); 
     const json = await HttpCommon.post(postItem, "/api/test/test1");
-    items = json.data;  
-console.log(items);
+//    items = json.data;  
+//console.log(items);
   } catch (error) {
     console.error(error);
   }   

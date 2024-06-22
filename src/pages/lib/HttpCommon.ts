@@ -10,17 +10,12 @@ const HttpCommon = {
   post: async function(item: any, path: string): Promise<any>
   {
     try {
-//      const url = import.meta.env.VITE_API_URL;
- //     const apiKey = import.meta.env.PUBLIC_API_KEY;
 //console.log("#getList.apiKey=" + apiKey);
       item.api_key = "";
       let url = ""; 
-      if(!import.meta.env.PROD){
-        url = import.meta.env.VITE_API_URL;
-      }
-console.log("url=" + url);
+//console.log("url=" + url);
       const body: any = JSON.stringify(item);		
-      const res = await fetch(url + path, {
+      const res = await fetch(path, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},      
         body: body

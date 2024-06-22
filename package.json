@@ -1,42 +1,31 @@
 {
-  "name": "@vitejs/test-ssr-react",
+  "name": "ssr-svelte",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=develop node server",
-    "build": "npm run clean && node build.js && npm run build:js && npm run build:server",
-    "build:copy": "cp -p src/index.js  dist",
-    "build:test": "vite build --outDir public/static",
-    "build:client": "vite build --outDir dist/client",
-    "build:js": "vite build --mode client --outDir public/client",
-    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
-    "generate": "vite build --outDir dist/static && npm run build:server && node prerender",
-    "clean": "rimraf dist && rimraf public/static",
-    "serve": "NODE_ENV=production node server",
-    "start": "NODE_ENV=develop node dist/index.js",
-    "debug": "node --inspect-brk server"
+    "dev": "node server",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
+    "preview": "cross-env NODE_ENV=production node server"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "compression": "^1.7.4",
+    "express": "^4.19.2",
+    "sirv": "^2.0.4"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.0.2",
-    "@tsconfig/svelte": "^5.0.2",
+    "@sveltejs/vite-plugin-svelte": "^3.1.0",
+    "@tsconfig/svelte": "^5.0.4",
     "@types/express": "^4.17.21",
-    "@types/node": "^20.11.30",
-    "@types/react": "^18.2.69",
-    "@types/react-dom": "^18.2.22",
-    "compression": "^1.7.4",
-    "express": "^4.18.2",
-    "rimraf": "^5.0.5",
-    "serve-static": "^1.15.0",
-    "svelte": "^4.2.12",
-    "svelte-check": "^3.6.8",
+    "@types/node": "^20.12.7",
+    "cross-env": "^7.0.3",
+    "svelte": "^4.2.15",
+    "svelte-check": "^3.6.9",
     "svelte-spa-router": "^4.0.1",
     "tslib": "^2.6.2",
-    "typescript": "^5.4.3",
-    "vite": "^5.2.3"
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10"
   }
 }

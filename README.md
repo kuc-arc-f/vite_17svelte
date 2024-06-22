@@ -1,6 +1,6 @@
 ﻿# vite_17svelte
 
- Version: 0.9.1
+ Version: 0.9.2
 
  Author  : Kouji Nakashima / kuc-arc-f.com
 

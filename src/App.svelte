@@ -1,12 +1,12 @@
 <script lang="ts">
 import Router from 'svelte-spa-router'
 //
-import Head from './components/Head.svelte'
+//import Head from './components/Head.svelte'
 //
-const pages = import.meta.glob('./client/*.svelte', { eager: true })
+const pages = import.meta.glob('./pages/*.svelte', { eager: true })
 
 const routes = Object.keys(pages).map((path) => {
-  const name = path.match(/\.\/client\/(.*)\.svelte$/)[1]
+  const name = path.match(/\.\/pages\/(.*)\.svelte$/)[1]
   return {
     name,
     path: name === 'Home' ? '/' : `/${name.toLowerCase()}`,
@@ -44,8 +44,5 @@ console.log(routeArray);
 <style>
 </style>
 <!--
-      <p>Title1</p>
-
-  {item.path}
-<h1>Vite + Svelte</h1>
 -->
+  
