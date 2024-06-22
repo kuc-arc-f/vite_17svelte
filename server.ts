@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import express from 'express'
 //
-import testRouter from './server/api/test.js';
+import testRouter from './server/api/test';
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production'
@@ -17,6 +17,7 @@ const ssrManifest = isProduction
   : undefined
 
 // Create http server
+console.log(".NODE_ENV =", process.env.NODE_ENV);
 const app = express()
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
