@@ -6,7 +6,7 @@
 
  date    : 2024/03/23 
 
- update  :
+ update  : 2024/06/23
 
 ***
 ### Summary
@@ -29,8 +29,16 @@ yarn dev
 * prod-start
 
 ```
-yarn start
+yarn build
+
+#
+yarn preview
 ```
+***
+### Related
+
+https://github.com/bluwy/create-vite-extra
+
 
 ***
 ### blog 
