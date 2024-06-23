@@ -6,7 +6,7 @@
 
  date    : 2024/03/23 
 
- update  : 2024/06/23  
+ update  : 2024/06/23 
 
 ***
 ### Summary
@@ -47,6 +47,8 @@ https://github.com/bluwy/create-vite-extra
 
 ***
 ### blog 
+
+https://zenn.dev/knaka0209/books/b1bd883fb8dd95/viewer/b077ba
 
 ***
 
