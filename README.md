@@ -14,6 +14,11 @@
 file base routing, Svelte + express + vite +  SPA sample
 
 ***
+### stackblitz
+
+https://stackblitz.com/~/github.com/kuc-arc-f/vite_17svelte
+
+***
 ### build
 
 * build, dev-start
