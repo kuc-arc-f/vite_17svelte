@@ -1,0 +1,37 @@
+{
+  "name": "ssr-svelte",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon",
+    "dev:test": "node server",
+    "build": "npm run clean && npm run build:client && npm run build:server && node build.js",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
+    "clean": "rimraf dist && rimraf server.js",
+    "preview": "cross-env NODE_ENV=production node server"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "compression": "^1.7.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "sirv": "^2.0.4"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.1.0",
+    "@tsconfig/svelte": "^5.0.4",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.4",
+    "rimraf": "^5.0.7",
+    "svelte": "^4.2.15",
+    "svelte-check": "^3.6.9",
+    "svelte-spa-router": "^4.0.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10"
+  }
+}
